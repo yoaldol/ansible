@@ -2,27 +2,18 @@
  
 - hosts: 172.16.16.128
 
-  tasks:
-  - name: Install Apache
-    apt: pkg=httpd state=latest
-  - name: Copying the demo file
-    template: src=/etc/ansible/index.html dest=/var/www/html
-              owner=apache group=apache mode=0644
-  - name: Enable Apache on System Boot
-    service: name=httpd enabled=yes
-
-    notify:
-    - start apache
-    - setup firewalld
-    - reload firewalld
-
-  handlers:
-    - name: start apache
-      service: name=httpd state=started
-    - name: setup firewalld
-      firewalld:
-        service: http
-        permanent: true
-        state: enabled
-    - name: reload firewalld
-      service: name=firewalld state=restarted
+tasks:
+ 
+- name: update
+ 
+apt: update_cache=yes
+ 
+- name: install apache2
+ 
+apt: name=apache2 state=present
+ 
+- name: restart apache2
+ 
+service: name=apache2 state=restarted
+ 
+- debug: msg="apache has been installed"
