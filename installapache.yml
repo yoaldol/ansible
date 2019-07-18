@@ -1,9 +1,8 @@
 ---
  
 - hosts: 172.16.16.128
-
+remote_user: raj
 become: yes 
-
 become_method: su
  
   tasks:
