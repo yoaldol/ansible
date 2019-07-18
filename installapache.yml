@@ -1,0 +1,22 @@
+---
+ 
+- hosts: 172.16.16.128
+ 
+sudo: yes
+ 
+tasks:
+ 
+- name: update
+ 
+apt: update_cache=yes
+ 
+- name: install apache2
+ 
+apt: name=apache2 state=present
+ 
+- name: restart apache2
+ 
+service: name=apache2 state=restarted
+ 
+- debug: msg="apache has been installed"
+ 
