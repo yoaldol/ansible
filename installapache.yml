@@ -1,7 +1,7 @@
 ---
  
 - hosts: 172.16.16.128
-remote_user: raj
+remote_user: dannyr
 become: yes 
 become_method: su
  
