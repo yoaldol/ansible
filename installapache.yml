@@ -17,3 +17,4 @@ apt: name=apache2 state=present
 service: name=apache2 state=restarted
  
 - debug: msg="apache has been installed"
+...
