@@ -1,7 +1,6 @@
 ---
  
 - hosts: 172.16.16.128
-remote_user: dannyr
 
   tasks:
   - name: Install Apache
