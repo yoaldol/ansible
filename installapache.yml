@@ -1,9 +1,9 @@
 ---
 - hosts: all
   tasks:
-    - name: install httpd
-      package: name=httpd state=latest
-    - name: install httpd
+    - name: install apache2
+      package: name=apache2 state=latest
+    - name: install apache2
       package:
          name: httpd
          state: latest
@@ -13,9 +13,9 @@
          content: "this is a webpage"
          dest: /var/www/html/index.html
       become: yes
-    - name: restart httpd
+    - name: restart apache2
       service:
-          name: httpd
+          name: apache2
           state: restarted
           enabled: yes
       become: yes
