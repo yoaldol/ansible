@@ -1,5 +1,5 @@
 ---
-- hosts: 192.168.2.130
+- hosts: all
   tasks:
     - name: install apache2
       apt: name=apache2 state=latest
