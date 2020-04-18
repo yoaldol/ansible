@@ -6,11 +6,11 @@
     yum:
       name: cockpit
       state: present
-- name: open port       
-  - firewalld:
-    port: 9090/tcp
-    permanent: yes
-    state: enabled    
+  - name: open port       
+    firewalld:
+      port: 9090/tcp
+      permanent: yes
+      state: enabled    
   - name: Restart service cockpit, in all cases
     service:
       name: cockpit.socket
