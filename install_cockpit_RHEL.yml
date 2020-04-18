@@ -17,12 +17,12 @@
       service: http
       permanent: true
       state: enabled     
-- name: Restart service cockpit, in all cases
-  service:
-    name: cockpit.socket
-    state: restarted
-- name: Enable service cockpit, and not touch the state
-  service:
-    name: cockpit.socket
-    enabled: yes    
+  - name: Restart service cockpit, in all cases
+    service:
+      name: cockpit.socket
+      state: restarted
+  - name: Enable service cockpit, and not touch the state
+    service:
+      name: cockpit.socket
+      enabled: yes    
 ...
