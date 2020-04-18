@@ -1,18 +1,12 @@
 ---
 - hosts: all
   tasks:
-   - name: Add group "nixadmins" to remote server
-     group:
-       name: nixadmins
-       gid: 2010
-       state: present
+  
    - name: Add user "sysadmin" to remote server
      user:
        name: sysadmin
        comment: "Privileged User"
        uid: 2001
-       group: nixadmins
-       groups: office,warehouse
        append: yes
        shell: /bin/bash
        generate_ssh_key: yes
