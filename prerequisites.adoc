@@ -19,6 +19,6 @@ Download virtualbox from https://www.virtualbox.org/wiki/Downloads
 
 Register the server with your development account. You can get the developer subscription at https://developers.redhat.com/register.
 
-4. Download a valid license for Ansible Tower from https://www.redhat.com/en/technologies/management/ansible/try-it
+4. Download a valid license for Ansible Tower from https://www.redhat.com/en/technologies/management/ansible/try-it or pull a request NFR license on OPEN https://partnercenter.redhat.com/NFR_Redirect
 
 
