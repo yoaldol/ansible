@@ -17,12 +17,8 @@
       service: http
       permanent: true
       state: enabled     
-  - name: Start service cockpit, if not started
-    service:
-      name: cockpit.socket
-      state: started
-   - name: Start service cockpit, if not started
-    service:
-      name: cockpit.socket
-      state: enabled
+- name: Restart service httpd, in all cases
+  service:
+    name: cockpit.socket
+    state: restarted
 ...
