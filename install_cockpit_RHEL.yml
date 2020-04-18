@@ -6,6 +6,7 @@
     yum:
       name: cockpit
       state: present
+- name: open port       
   - firewalld:
     port: 9090/tcp
     permanent: yes
