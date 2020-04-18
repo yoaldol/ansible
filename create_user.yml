@@ -1,8 +1,5 @@
 ---
 - hosts: all
-  become: yes
-  become_method: sudo
-  gather_facts: no
   tasks:
    - name: Add group "nixadmins" to remote server
      group:
