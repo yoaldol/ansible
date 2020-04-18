@@ -1,3 +1,4 @@
+---
 - name: httpd
   hosts: all
   tasks:
@@ -18,3 +19,4 @@
     service: 
       name: firewalld 
       state: restarted
+...
