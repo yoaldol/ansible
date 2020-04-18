@@ -5,5 +5,5 @@
    - name: Add user "sysadmin" to remote server
      user:
        name: sysadmin
-       state: abstent
+       state: absent
 ...
