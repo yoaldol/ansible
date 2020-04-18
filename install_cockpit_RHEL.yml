@@ -17,10 +17,12 @@
       service: http
       permanent: true
       state: enabled
-  - name: systemctl enable services
+  - name: systemctl restart services
     service: 
       name: cockpit.socket 
-      state: enabled
-      name: cockpit.socket 
       state: restart
+  - name: systemctl enabled services
+      name: cockpit.socket 
+      state: enabled
+
 ...
