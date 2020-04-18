@@ -6,17 +6,10 @@
     yum:
       name: cockpit
       state: present
-  - name: ensure httpd is running
-    service:
-      name: httpd 
-      state: started
-  - name: Open port 9090 for access
-    firewalld:
-      port: 9090
-      type: tcp
-      service: http
-      permanent: true
-      state: enabled     
+  - firewalld:
+    port: 9090/tcp
+    permanent: yes
+    state: enabled    
   - name: Restart service cockpit, in all cases
     service:
       name: cockpit.socket
