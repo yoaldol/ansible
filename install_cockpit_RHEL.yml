@@ -4,7 +4,7 @@
   tasks:
   - name: Install cockpit packages 
     yum:
-      name: cockpit cockpit
+      name: cockpit.cockpit
       state: present
   - name: ensure httpd is running
     service:
