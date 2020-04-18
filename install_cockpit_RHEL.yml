@@ -16,13 +16,13 @@
       type: tcp
       service: http
       permanent: true
+      state: enabled     
+  - name: Start service cockpit, if not started
+    service:
+      name: cockpit.socket
+      state: started
+   - name: Start service cockpit, if not started
+    service:
+      name: cockpit.socket
       state: enabled
-  - name: systemctl restart services
-    service: 
-      name: cockpit.socket 
-      state: restart
-  - name: systemctl enabled services
-      name: cockpit.socket 
-      state: enabled
-
 ...
