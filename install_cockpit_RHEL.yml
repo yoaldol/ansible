@@ -1,0 +1,26 @@
+---
+- name: cockpit
+  hosts: all
+  tasks:
+  - name: Install cockpit packages 
+    yum:
+      name: cockpit cockpit
+      state: present
+  - name: ensure httpd is running
+    service:
+      name: httpd 
+      state: started
+  - name: Open port 9090 for access
+    firewalld:
+      port: 9090
+      type: tcp
+      service: http
+      permanent: true
+      state: enabled
+  - name: systemctl enable services
+    service: 
+      name: cockpit.socket 
+      state: enabled
+      name: cockpit.socket 
+      state: restart
+...
