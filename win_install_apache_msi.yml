@@ -1,10 +1,31 @@
 ---
-- name: Install Apache from an MSI 
-  hosts: ansible-server 
-  
+
+- name: Installing Apache MSI
+
+  hosts: win
+
   tasks:
-  - name: Ensure 7-Zip is installed via Chocolatey
-    win_chocolatey:
-     name: 7zip
-     state: present
-...        
+
+    - name: Download the Apache installer
+
+      win_get_url:
+
+        url: https://archive.apache.org/dist/httpd/binaries/win32/httpd-2.2.25-win32-x86-no_ssl.msi
+
+        dest: C:\ansible_examples\httpd-2.2.25-win32-x86-no_ssl.msi
+
+
+    - name: Install MSI
+
+      win_package:
+
+        path: C:\ansible_examples\httpd-2.2.25-win32-x86-no_ssl.msi
+
+        arguments:
+
+          - /install
+
+          - /passive
+
+          - /norestart
+...
