@@ -1,6 +1,6 @@
 ---
 - name: Install Apache from an MSI 
-  hosts: all 
+  hosts: ansible-server 
   
   tasks:
   - name: Ensure 7-Zip is installed via Chocolatey
