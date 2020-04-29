@@ -1,0 +1,15 @@
+---
+- hosts: win
+
+  tasks:
+
+  - name: Copy File
+
+    win_copy:
+
+      src: C:\wallpaper.jpg
+
+      dest: C:\ansible_examples\wallpaper.jpg
+
+      remote_src: yes
+...
