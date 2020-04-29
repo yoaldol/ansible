@@ -8,9 +8,9 @@
 
     win_copy:
 
-      src: C:\wallpaper.jpg
+      src: "C:\wallpaper.jpg"
 
-      dest: C:\ansible_examples\wallpaper.jpg
+      dest: "C:\ansible_examples\wallpaper.jpg"
 
       remote_src: yes
 ...
