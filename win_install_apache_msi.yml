@@ -2,7 +2,7 @@
 
 - name: Installing Apache MSI
 
-  hosts: win
+  hosts: ansible-server
 
   tasks:
 
