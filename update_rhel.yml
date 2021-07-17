@@ -1,9 +1,9 @@
 ---
 - name: update dev
-  hosts: all
+  hosts: all
   become: true
   tasks:
-    - name: install update
+    - name: install update
       yum:
         name: '*'
         state: latest
