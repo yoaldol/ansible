@@ -1,6 +1,7 @@
 ---
 - name: update dev
   hosts: all
+  become: true
   tasks:
     - name: install update
       yum:
