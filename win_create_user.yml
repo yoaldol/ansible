@@ -6,6 +6,6 @@
     - name: Add User
       win_user:
         name: ansible
-        password: "enablement"
+        password: "Password.01"
         state: present
 ...
