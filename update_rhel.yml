@@ -1,9 +1,6 @@
 ---
-- name: update dev
-  hosts: all
-  tasks:
-    - name: install update
-      yum:
-        name: '*'
-        state: latest
-        update_cache: true
+- name: install update
+  yum:
+    name: '*'
+    state: latest
+    update_cache: true
